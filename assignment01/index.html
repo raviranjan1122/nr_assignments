@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namaste ReactJS</title>
+</head>
+<body>
+    <h1>Hello Ravi!</h1>
+    <h1>Welcome to React First Session</h1>
+    <div id="root">
+
+    </div>
+    <!-- DOM Manupulation in Javascript... -->
+    <script>
+        // creating tag by using javascript.
+        const heading = document.createElement("h1");
+    
+        heading.innerHTML = "Let's dive into the basic concept of ReactJS";
+    
+        const root = document.getElementById("root");
+    
+        root.appendChild(heading);
+    </script>
+</body>
+</html>
