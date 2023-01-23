@@ -1,0 +1,16 @@
+// without options
+// {
+//     "plugins": ["transform-remove-console"]
+//   }
+// with options
+{
+    "plugins": [ ["transform-remove-console", { "exclude": [ "error", "warn"] }] ]
+  }
+// Why we are using babel plugin...
+// Ans: When you are going for the production and that moments you dont want to show the console.log message or-
+// error or warning message , then you need to use this babel script to resolve these things.
+
+// In this i am commenting this one, because of this once i am not able to see my console.log messages...
+// {
+//     "plugins": [ ["transform-remove-console", { "exclude": [ "error", "warn"] }] ]
+//   }
