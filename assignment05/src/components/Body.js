@@ -65,12 +65,16 @@ async function getRestaurants(){
 }
 
 console.log("render...");
-
-// not render component (Early return)
-//if(!allRestaurants) return null;
+/**
+ * 1. 1st use shimmer ui
+ * 2. after filter if you are not finding any restaurant the use "No Restaurants Found"
+ */
+// not render component ( this is know as Early return)
+if(!allRestaurants) return null;
+//if(!allRestaurants) return null; If i dont have any restaurents then show no restaurannts ....
 
 if(filterRestaurants?.length===0)
-return <h1> No Restaurant Found...</h1>
+return <h1> No Restaurant match your filter...</h1>
 
 //Conditional Rendering......
     return  allRestaurants.length === 0 ?(<Shimmer/>):(
@@ -106,6 +110,7 @@ return <h1> No Restaurant Found...</h1>
         </button>
       </div>
       <div className="restaurantList">
+        {/* you have to write logic for NO Restaurants found here  */}
           {filterRestaurants.map((restaurant)=>{
               return (<RestaurantCard {...restaurant.data} key={restaurant.data.id}/>);
           })}
