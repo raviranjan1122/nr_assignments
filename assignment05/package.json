@@ -1,0 +1,29 @@
+{
+  "name": "firstapp",
+  "version": "1.0.0",
+  "description": "using components creating my first react project.",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/penseurtank/namaste-dev.git"
+  },
+  "author": "Ravi Ranjan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/penseurtank/namaste-dev/issues"
+  },
+  "homepage": "https://github.com/penseurtank/namaste-dev#readme",
+  "devDependencies": {
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "parcel": "^2.8.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
