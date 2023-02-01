@@ -73,8 +73,8 @@ console.log("render...");
 //if(!allRestaurants) return null;
 //if(!allRestaurants) return null; If i dont have any restaurents then show no restaurannts ....
 
-if(filterRestaurants?.length===0)
-return <h1> No Restaurant match your filter...</h1>
+//if(filterRestaurants?.length===0)
+//return <h1> No Restaurant match your filter...</h1>
 
 //Conditional Rendering......
     return  allRestaurants.length === 0 ?(<Shimmer/>):(
@@ -111,6 +111,7 @@ return <h1> No Restaurant match your filter...</h1>
       </div>
       <div className="restaurantList">
         {/* you have to write logic for NO Restaurants found here  */}
+        {filterRestaurants?.length === 0 && <div>No Restaurant Found!!!</div>}
           {filterRestaurants.map((restaurant)=>{
               return (<RestaurantCard {...restaurant.data} key={restaurant.data.id}/>);
           })}
