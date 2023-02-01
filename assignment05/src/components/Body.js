@@ -70,7 +70,7 @@ console.log("render...");
  * 2. after filter if you are not finding any restaurant the use "No Restaurants Found"
  */
 // not render component ( this is know as Early return)
-if(!allRestaurants) return null;
+//if(!allRestaurants) return null;
 //if(!allRestaurants) return null; If i dont have any restaurents then show no restaurannts ....
 
 if(filterRestaurants?.length===0)

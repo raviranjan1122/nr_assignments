@@ -8,14 +8,18 @@ const Title = () => (
   />
 );
 
-const loggedInUser = () =>{
+// const loggedInUser = () =>{
 // API call to check authentication
-return false;
-}
+// return false;
+// }
 
 const Header = () => {
   
   const [isloggedIn, setIsLoggedIn] = useState(false);
+
+  const toggleIsLoggedIn = () =>{
+    setIsLoggedIn(!isloggedIn);
+  }
 
   return (
     <div className="header">
@@ -38,11 +42,17 @@ const Header = () => {
          * but once you write within expression...then it will work.
          * ((a=10), console.log(a)) this will work...
          */
-        isloggedIn ? (
-          <button onClick={() => setIsLoggedIn(false)}>Logout</button>
-        ) : (
-          <button onClick={() => setIsLoggedIn(true)}>Login</button>
-        )
+        // isloggedIn ? (
+        //   <button onClick={() => setIsLoggedIn(false)}>Logout</button>
+        // ) : (
+        //   <button onClick={() => setIsLoggedIn(true)}>Login</button>
+        // )
+        <button onClick={toggleIsLoggedIn}>
+          {
+            isloggedIn ? "logout" : "login"
+          }
+        </button>
+
       }
     </div>
   );
